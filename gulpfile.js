@@ -45,6 +45,16 @@ gulp.task('watch', function() {
   gulp.watch('app/js/**/*.js', browserSync.reload);
 })
 
+//autoprefixer
+gulp.task('autoprefixer', function () {
+    return gulp.src('app/css/styles.css')
+        .pipe(autoprefixer({
+            browsers: ['IE 8', 'IE 9', 'last 5 versions', 'Firefox 14', 'Opera 11.1'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('app/css'));
+});
+
 // Optimization Tasks 
 // ------------------
 
@@ -89,7 +99,7 @@ gulp.task('clean:dist', function() {
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync'], 'watch',
+  runSequence(['sass', 'autoprefixer', 'browserSync'], 'watch',
     callback
   )
 })

@@ -1,7 +1,3 @@
-body {
-  font-variant: small-caps;
-  font-size: 16px; }
-
 .stepwizard {
   display: table;
   width: 100%;
@@ -309,10 +305,16 @@ body {
     margin-right: 10px;
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 991px) {
+      #wizardProfile .form-group > div {
+        width: 300px; } }
 
 #wizardProfile .wizard-title, #wizardProfile .wizard-title a {
   font-size: 36px;
   text-transform: uppercase; }
+  @media screen and (max-width: 1199px) {
+    #wizardProfile .wizard-title, #wizardProfile .wizard-title a {
+      font-size: 32px; } }
 
 #wizardProfile.wizard-card .moving-tab {
   top: 0;
@@ -325,6 +327,16 @@ body {
   text-transform: none;
   font-variant: small-caps;
   font-size: 18px; }
+  @media screen and (max-width: 1199px) {
+    #wizardProfile.wizard-card .moving-tab {
+      font-size: 16px; } }
+  @media screen and (max-width: 1199px) {
+    #wizardProfile.wizard-card .moving-tab {
+      font-size: 14px;
+      line-height: 14px; } }
+  @media screen and (max-width: 767px) {
+    #wizardProfile.wizard-card .moving-tab {
+      display: none; } }
 
 #wizardProfile .wizard-description {
   background: #f4f4f4;
@@ -351,6 +363,9 @@ body {
         display: inline-flex;
         margin-bottom: 5px;
         justify-content: space-between; }
+        @media screen and (max-width: 767px) {
+          #wizardProfile .wizard-block .wizard-left-top-block {
+            width: 100%; } }
         #wizardProfile .wizard-block .wizard-left-top-block .form-group {
           width: 100%;
           display: flex;
@@ -363,6 +378,22 @@ body {
       justify-content: space-between;
       align-items: flex-end;
       padding-bottom: 15px; }
+  #wizardProfile .wizard-block .wizard-right-img {
+    width: 320px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #00bcd4; }
+    @media screen and (max-width: 1199px) {
+      #wizardProfile .wizard-block .wizard-right-img {
+        width: 200px; } }
+    @media screen and (max-width: 991px) {
+      #wizardProfile .wizard-block .wizard-right-img {
+        display: none; } }
+    #wizardProfile .wizard-block .wizard-right-img img {
+      height: 100%; }
 
 #wizardProfile .form-control, #wizardProfile .form-group .form-control {
   font-weight: 400;
@@ -383,7 +414,7 @@ body {
 
 #wizardProfile .total_price {
   font-weight: 400;
-  width: 140px;
+  width: 200px;
   height: 44px;
   text-align: center;
   display: flex;
@@ -398,7 +429,7 @@ body {
   line-height: .9;
   font-size: 18px;
   color: #000;
-  padding-right: 20%;
+  padding-right: 20px;
   text-align: left;
   top: 0;
   margin-top: 0; }
@@ -409,6 +440,12 @@ body {
   font-size: 18px;
   line-height: .9;
   color: #00bcd4; }
+  @media screen and (max-width: 1199px) {
+    #wizardProfile .form-group.label-static label.control-label, #wizardProfile .form-group.label-floating.is-focused label.control-label, #wizardProfile .form-group.label-floating:not(.is-empty) label.control-label {
+      font-size: 16px; } }
+  @media screen and (max-width: 991px) {
+    #wizardProfile .form-group.label-static label.control-label, #wizardProfile .form-group.label-floating.is-focused label.control-label, #wizardProfile .form-group.label-floating:not(.is-empty) label.control-label {
+      font-size: 14px; } }
 
 #wizardProfile .form-group .form-control.error + label, #wizardProfile .form-group.has-error label {
   color: #ff1100 !important; }
@@ -417,6 +454,10 @@ body {
   height: 40px;
   justify-content: center;
   align-items: center; }
+  @media screen and (max-width: 767px) {
+    #wizardProfile .nav {
+      flex-direction: column;
+      height: 200px; } }
 
 #wizardProfile .nav-pills > li > a {
   font-size: 18px;
@@ -425,9 +466,32 @@ body {
   transition: .3s;
   display: block;
   line-height: 38px; }
+  @media screen and (max-width: 1199px) {
+    #wizardProfile .nav-pills > li > a {
+      font-size: 16px; } }
+  @media screen and (max-width: 991px) {
+    #wizardProfile .nav-pills > li > a {
+      font-size: 14px;
+      line-height: 14px; } }
+  @media screen and (max-width: 767px) {
+    #wizardProfile .nav-pills > li > a {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
   #wizardProfile .nav-pills > li > a:hover {
     color: #00bcd4 !important;
     transition: .3s; }
+
+@media screen and (max-width: 767px) {
+  #wizardProfile .nav-pills > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100% !important;
+    height: 40px; } }
 
 #wizardProfile .nav-pills > li:not(:last-child) > a {
   font-size: 18px;
@@ -437,10 +501,40 @@ body {
   display: block;
   line-height: 38px;
   border-right: 1px solid #e4e4e4 !important; }
+  @media screen and (max-width: 1199px) {
+    #wizardProfile .nav-pills > li:not(:last-child) > a {
+      font-size: 16px; } }
+  @media screen and (max-width: 991px) {
+    #wizardProfile .nav-pills > li:not(:last-child) > a {
+      font-size: 14px;
+      line-height: 14px; } }
+  @media screen and (max-width: 767px) {
+    #wizardProfile .nav-pills > li:not(:last-child) > a {
+      display: flex; } }
+
+#wizardProfile .nav-pills > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px; }
+  @media screen and (max-width: 767px) {
+    #wizardProfile .nav-pills > li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 100% !important;
+      height: 40px; } }
 
 #wizardProfile .nav-pills > li:hover {
   border: 1px solid #00bcd4 !important;
-  height: 40px; }
+  height: 40px;
+  line-height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 #wizardProfile .btn.btn-info, #wizardProfile .btn.btn-info:hover, #wizardProfile .btn.btn-info:focus, #wizardProfile .btn.btn-info:active, #wizardProfile .btn.btn-info.active, #wizardProfile .btn.btn-info:active:focus, #wizardProfile .btn.btn-info:active:hover, #wizardProfile .btn.btn-info.active:focus, #wizardProfile .btn.btn-info.active:hover, #wizardProfile .open > .btn.btn-info.dropdown-toggle, #wizardProfile .open > .btn.btn-info.dropdown-toggle:focus, #wizardProfile .open > .btn.btn-info.dropdown-toggle:hover {
   border-radius: 0;
@@ -512,6 +606,9 @@ body {
 #wizardProfile .tab-pane .control-label {
   width: 230px !important;
   padding-right: 0 !important; }
+  @media screen and (max-width: 991px) {
+    #wizardProfile .tab-pane .control-label {
+      width: 200px !important; } }
 
 #wizardProfile .tab-pane .form-control {
   margin-left: 0 !important; }
@@ -521,6 +618,10 @@ body {
   order: 2;
   line-height: 16px;
   margin-top: 6px; }
+  @media screen and (max-width: 991px) {
+    #wizardProfile .tab-pane p {
+      font-size: 14px;
+      line-height: 14px; } }
 
 #wizardProfile .tab-pane input[type=radio].radio {
   position: relative;
@@ -533,7 +634,7 @@ body {
     position: relative;
     padding: 0;
     cursor: pointer;
-    color: #000 !important;
+    color: #000;
     order: 0; }
     #wizardProfile .tab-pane input[type=radio].radio + label:before {
       content: '';
@@ -544,6 +645,9 @@ body {
       height: 30px;
       background: #f4f4f4;
       border: 1px solid #dadada; }
+      @media screen and (max-width: 991px) {
+        #wizardProfile .tab-pane input[type=radio].radio + label:before {
+          left: 195px; } }
     #wizardProfile .tab-pane input[type=radio].radio + label:after {
       content: '';
       position: absolute;
@@ -554,14 +658,19 @@ body {
       background: #00bcd4;
       opacity: 0;
       transition: .2s; }
+      @media screen and (max-width: 991px) {
+        #wizardProfile .tab-pane input[type=radio].radio + label:after {
+          left: 195px; } }
   #wizardProfile .tab-pane input[type=radio].radio:checked + label {
-    color: #00bcd4 !important; }
+    color: #00bcd4; }
     #wizardProfile .tab-pane input[type=radio].radio:checked + label:after {
       opacity: 1; }
     #wizardProfile .tab-pane input[type=radio].radio:checked + label:before {
       outline: none; }
   #wizardProfile .tab-pane input[type=radio].radio:checked + label + p {
-    color: #00bcd4 !important; }
+    color: #00bcd4; }
+  #wizardProfile .tab-pane input[type=radio].radio:disabled {
+    cursor: no-drop; }
 
 #wizardProfile .tab-pane .info-text {
   width: 100%;
@@ -572,5 +681,11 @@ body {
     display: block;
     text-align: right;
     font-size: 18px; }
+    @media screen and (max-width: 1199px) {
+      #wizardProfile .tab-pane .info-text a.float-right {
+        font-size: 16px; } }
+    @media screen and (max-width: 991px) {
+      #wizardProfile .tab-pane .info-text a.float-right {
+        width: 100%; } }
     #wizardProfile .tab-pane .info-text a.float-right:hover {
       text-decoration: none; }

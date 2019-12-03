@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap Form Wizard w/ Tooltipster and jQuery Validate</title>
 
-    <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/material-bootstrap-wizard.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/style.css">
@@ -33,10 +30,10 @@
                             <h3 class="wizard-title">
                                 Quick Estimator
                             </h3>
-                            <h5 class="mb-3">Use the Quick Estimator to find out the cost of windows and doors. Save the
+                            <h5 class="mb-3 px-3">Use the Quick Estimator to find out the cost of windows and doors. Save the
                                 document or
                                 кequest a quote.</h5>
-                            <p class="wizard-description mx-5">
+                            <p class="wizard-description mx-3 mx-md-5">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam at consectetur
                                 doloremque esse ex in labore maxime modi natus numquam officiis pariatur praesentium
                                 quam quasi, repellendus vero. Consequuntur delectus eos impedit in necessitatibus nisi
@@ -56,7 +53,7 @@
                                         <div class="wizard-left-top-block">
                                             <div class="input-group">
                                                 <div class="form-group label-floating">
-                                                    <input name="sq_ft" id="sq_ft" type="text" class="form-control">
+                                                    <input name="sq_ft" id="sq_ft" type="number" class="form-control" value="200" required>
                                                     <label class="control-label">Total sq.ft of windows and doors
                                                         <small>*</small>
                                                     </label>
@@ -66,7 +63,7 @@
                                         <div class="wizard-left-top-block">
                                             <div class="input-group">
                                                 <div class="form-group label-floating">
-                                                    <input name="windows_qty" id="windows_qty" type="text" class="form-control">
+                                                    <input name="windows_qty" id="windows_qty" type="number" class="form-control" value="10" required>
                                                     <label class="control-label">Number of windows
                                                         <small>*</small>
                                                     </label>
@@ -76,48 +73,44 @@
                                         <div class="wizard-left-top-block">
                                             <div class="input-group">
                                                 <div class="form-group label-floating">
-                                                    <input name="entrance_doors" id="entrance_doors" type="text" class="form-control">
-                                                    <label class="control-label">Number of Entrance doors
-                                                        <small>*</small>
-                                                    </label>
+                                                    <input name="entrance_doors" id="entrance_doors" type="number" class="form-control" value="2">
+                                                    <label class="control-label">Number of Entrance doors</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="wizard-left-top-block">
                                             <div class="input-group">
                                                 <div class="form-group label-floating">
-                                                    <input name="patio_doors" id="patio_doors" type="text" class="form-control">
-                                                    <label class="control-label">Number of Garden/Patio doors
-                                                        <small>*</small>
-                                                    </label>
+                                                    <input name="patio_doors" id="patio_doors" type="number" class="form-control" value="1">
+                                                    <label class="control-label">Number of Garden/Patio doors</label>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="wizard-left-bottom pr-2">
-                                        <div class="wizard-left-bottom-block currency-block">
+                                    <div class="wizard-left-bottom pr-0 pr-md-2 flex-column flex-md-row align-items-center my-3 my-md-0">
+                                        <div class="wizard-left-bottom-block currency-block text-center pb-1 pb-md-0">
                                             <div class="input-group">
                                                 <div class="form-group label-floating position-relative">
-                                                    <input name="currency" id="usd" type="radio" class="form-control radio" value="US $" checked>
+                                                    <input name="currency" id="usd" type="radio" class="currency form-control radio" value="0.8">
                                                     <label class="control-label"><span>US $</span></label>
                                                 </div>
                                                 <div class="form-group label-floating position-relative">
-                                                    <input name="currency" id="cdn" type="radio" class="form-control radio" value="CDN $">
+                                                    <input name="currency" id="cdn" type="radio" class="currency form-control radio" value="1" checked>
                                                     <label class="control-label"><span>CDN $</span></label>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="wizard-left-bottom-block">
+                                        <div class="wizard-left-bottom-block pb-1 pb-md-0">
                                             <p id="total" class="total_price">Total</p>
                                         </div>
-                                        <div class="wizard-left-bottom-block">
+                                        <div class="wizard-left-bottom-block pb-1 pb-md-0">
                                             <a class="btn btn-info" href="#" role="button">Save as PDF</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="wizard-right">
                                     <div class="wizard-right-img">
-                                        <img src="https://place-hold.it/290x230?text=Picture of Window&fontsize=16" alt="">
+                                        <img src="images/window.jpg" alt="Window">
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +122,7 @@
                                 <li><a href="#glazing" data-toggle="tab">Glazing Options</a></li>
                                 <li><a href="#soundproof" data-toggle="tab">Soundproof Options</a></li>
                                 <li><a href="#other" data-toggle="tab">Other Options</a></li>
-                                <li><a href="#quote" data-toggle="tab">Request a quote</a></li>
+                                <!--<li><a href="#quote" data-toggle="tab">Request a quote</a></li>-->
                             </ul>
                         </div>
 
@@ -142,67 +135,67 @@
                                     </h4>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="energy" id="energy-1" type="radio" class="form-control radio" value="0">
+                                                    <input name="energy" id="energy-1" type="radio" class="energy form-control radio" value="0" disabled>
                                                     <label class="control-label" for="energy-1">R-3.8 Double pane glazing</label>
                                                 </div>
-                                                <p>Low-E, Argon (4 - 20Ar - 4 lowE). Undergrade level.</p>
+                                                <p class="mt-2 mt-md-0">Low-E, Argon (4 - 20Ar - 4 lowE). Undergrade level.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="energy" id="energy-2" type="radio" class="form-control radio" value="-0.5">
+                                                    <input name="energy" id="energy-2" type="radio" class="energy form-control radio" value="-0.5">
                                                     <label class="control-label" for="energy-2">R-5.5 Triple-pane glazing</label>
                                                 </div>
-                                                <p>Entry level. Low-E, Argon.</p>
+                                                <p class="mt-2 mt-md-0">Entry level. Low-E, Argon.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="energy" id="energy-3" type="radio" class="form-control radio" value="0">
+                                                    <input name="energy" id="energy-3" type="radio" class="energy form-control radio" value="0" checked>
                                                     <label class="control-label" for="energy-3">R-8.1 Triple-pane glazing</label>
                                                 </div>
-                                                <p>Optimal for north side rooms to keep max sun. 2Low-E, 2Argon.</p>
+                                                <p class="mt-2 mt-md-0">Optimal for north side rooms to keep max sun. 2Low-E, 2Argon.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="energy" id="energy-4" type="radio" class="form-control radio" value="1" checked>
+                                                    <input name="energy" id="energy-4" type="radio" class="energy form-control radio" value="1">
                                                     <label class="control-label" for="energy-4">R-8.7 Triple-pane glazing</label>
                                                 </div>
-                                                <p>Optimal price/quality choice. 2Low-E, 2Argon.</p>
+                                                <p class="mt-2 mt-md-0">Optimal price/quality choice. 2Low-E, 2Argon.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="energy" id="energy-5" type="radio" class="form-control radio" value="4.5">
+                                                    <input name="energy" id="energy-5" type="radio" class="energy form-control radio" value="4.5">
                                                     <label class="control-label" for="energy-5">R-10 Triple-pane glazing</label>
                                                 </div>
-                                                <p>High-end solution.</p>
+                                                <p class="mt-2 mt-md-0">High-end solution.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="energy" id="energy-6" type="radio" class="form-control radio" value="10">
+                                                    <input name="energy" id="energy-6" type="radio" class="energy form-control radio" value="10">
                                                     <label class="control-label" for="energy-6">R-12 Quadruple-pane glazing</label>
                                                 </div>
-                                                <p>Suitable not for all type of windows and options.</p>
+                                                <p class="mt-2 mt-md-0">Suitable not for all type of windows and options.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -216,67 +209,67 @@
                                 <div class="row">
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="color" id="color-1" type="radio" class="form-control radio" value="1" checked>
+                                                    <input name="color" id="color-1" type="radio" class="color form-control radio" value="1" checked>
                                                     <label class="control-label" for="color-1">White</label>
                                                 </div>
-                                                <p>Standard, very good.</p>
+                                                <p class="mt-2 mt-md-0">Standard, very good.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="color" id="color-2" type="radio" class="form-control radio" value="1.11">
+                                                    <input name="color" id="color-2" type="radio" class="color form-control radio" value="1.11">
                                                     <label class="control-label" for="color-2">One side color</label>
                                                 </div>
-                                                <p>One side color - common choice for coloured windows.</p>
+                                                <p class="mt-2 mt-md-0">One side color - common choice for coloured windows.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="color" id="color-3" type="radio" class="form-control radio" value="1.22">
+                                                    <input name="color" id="color-3" type="radio" class="color form-control radio" value="1.22">
                                                     <label class="control-label" for="color-3">Two side color</label>
                                                 </div>
-                                                <p>Both side coloured.</p>
+                                                <p class="mt-2 mt-md-0">Both side coloured.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="color" id="color-4" type="radio" class="form-control radio" value="1.26">
+                                                    <input name="color" id="color-4" type="radio" class="color form-control radio" value="1.26">
                                                     <label class="control-label" for="color-4">Two side color frame</label>
                                                 </div>
-                                                <p>Dark frames with dark colors have some additional limitation.</p>
+                                                <p class="mt-2 mt-md-0">Dark frames with dark colors have some additional limitation.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="color" id="color-5" type="radio" class="form-control radio" value="1.21">
+                                                    <input name="color" id="color-5" type="radio" class="color form-control radio" value="1.21">
                                                     <label class="control-label" for="color-5">Acryl Color White inside</label>
                                                 </div>
-                                                <p>Top of the line solution. Acrylic Glass covered frames from outside.</p>
+                                                <p class="mt-2 mt-md-0">Top of the line solution. Acrylic Glass covered frames from outside.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="color" id="color-6" type="radio" class="form-control radio" value="1.32">
+                                                    <input name="color" id="color-6" type="radio" class="color form-control radio" value="1.32">
                                                     <label class="control-label" for="color-6">Acryl Color color inside</label>
                                                 </div>
-                                                <p>Top of the line solution. Acrylic Glass covered frames from outside and color surface inside.</p>
+                                                <p class="mt-2 mt-md-0">Top of the line solution. Acrylic Glass covered frames from outside and color surface inside.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -290,78 +283,78 @@
                                 <div class="row">
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-1" type="radio" class="form-control radio" value="0">
+                                                    <input name="glazing" id="glazing-1" type="radio" class="glazing form-control radio" value="0" disabled>
                                                     <label class="control-label" for="glazing-1">Double-pane regular LowE</label>
                                                 </div>
-                                                <p>SHGC - 61% VTG - 80%.</p>
+                                                <p class="mt-2 mt-md-0">SHGC - 61% VTG - 80%.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-2" type="radio" class="form-control radio" value="0" checked>
+                                                    <input name="glazing" id="glazing-2" type="radio" class="glazing form-control radio" value="0" checked>
                                                     <label class="control-label" for="glazing-2">Guardian ClimaGuard North</label>
                                                 </div>
-                                                <p>SHGC - 41% VTG - 72%. Very Good for North Side of house or small windows projects.</p>
+                                                <p class="mt-2 mt-md-0">SHGC - 41% VTG - 72%. Very Good for North Side of house or small windows projects.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-3" type="radio" class="form-control radio" value="0.5">
+                                                    <input name="glazing" id="glazing-3" type="radio" class="glazing form-control radio" value="0.5">
                                                     <label class="control-label" for="glazing-3">Guardian ClimaGuard EW</label>
                                                 </div>
-                                                <p>SHGC - 34% VTG - 69%. Optimal for everage windows projects.</p>
+                                                <p class="mt-2 mt-md-0">SHGC - 34% VTG - 69%. Optimal for everage windows projects.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-4" type="radio" class="form-control radio" value="1">
+                                                    <input name="glazing" id="glazing-4" type="radio" class="glazing form-control radio" value="1">
                                                     <label class="control-label" for="glazing-4">Guardian ClimaGuard S</label>
                                                 </div>
-                                                <p>SHGC - 30% VTG - 64%. Optimal for big windows projects or South side for others.</p>
+                                                <p class="mt-2 mt-md-0">SHGC - 30% VTG - 64%. Optimal for big windows projects or South side for others.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-5" type="radio" class="form-control radio" value="20">
+                                                    <input name="glazing" id="glazing-5" type="radio" class="glazing form-control radio" value="20">
                                                     <label class="control-label" for="glazing-5">Guardian SunGuard SN</label>
                                                 </div>
-                                                <p>SHGC - 24% VTG - 59%. Optimal for the south side for the big windows projects.</p>
+                                                <p class="mt-2 mt-md-0">SHGC - 24% VTG - 59%. Optimal for the south side for the big windows projects.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-6" type="radio" class="form-control radio" value="30">
+                                                    <input name="glazing" id="glazing-6" type="radio" class="glazing form-control radio" value="30">
                                                     <label class="control-label" for="glazing-6">Guardian SunGuard S</label>
                                                 </div>
-                                                <p>SHGC -15% VTG - 42%. Requred tempered glass units. Optional color glazing (Silver, Blue, Green, Brown and etc.)</p>
+                                                <p class="mt-2 mt-md-0">SHGC -15% VTG - 42%. Requred tempered glass units. Optional color glazing (Silver, Blue, Green, Brown and etc.)</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="glazing" id="glazing-7" type="radio" class="form-control radio" value="0">
+                                                    <input name="glazing" id="glazing-7" type="radio" class="glazing form-control radio" value="0" disabled>
                                                     <label class="control-label" for="glazing-7">Other under request</label>
                                                 </div>
-                                                <p></p>
+                                                <p class="mt-2 mt-md-0"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -375,78 +368,78 @@
                                 <div class="row">
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-1" type="radio" class="form-control radio" value="0">
+                                                    <input name="soundproof" id="soundproof-1" type="radio" class="soundproof form-control radio" value="0" disabled>
                                                     <label class="control-label" for="soundproof-1">STC 30</label>
                                                 </div>
-                                                <p>Regular 1-7/16 (37 mm) Triple-pane Glass Units from competitors.</p>
+                                                <p class="mt-2 mt-md-0">Regular 1-7/16 (37 mm) Triple-pane Glass Units from competitors.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-2" type="radio" class="form-control radio" value="0" checked>
+                                                    <input name="soundproof" id="soundproof-2" type="radio" class="soundproof form-control radio" value="0" checked>
                                                     <label class="control-label" for="soundproof-2">STC 33</label>
                                                 </div>
-                                                <p>Regular Energy Efficient 1-3/4 (44 mm) Glass Unit.</p>
+                                                <p class="mt-2 mt-md-0">Regular Energy Efficient 1-3/4 (44 mm) Glass Unit.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-3" type="radio" class="form-control radio" value="04">
+                                                    <input name="soundproof" id="soundproof-3" type="radio" class="soundproof form-control radio" value="0.4">
                                                     <label class="control-label" for="soundproof-3">STC 35</label>
                                                 </div>
-                                                <p>SoundConrol - improved 1-3/4 (44 mm) Glass Unit - optimized for Highway Noise.</p>
+                                                <p class="mt-2 mt-md-0">SoundConrol - improved 1-3/4 (44 mm) Glass Unit - optimized for Highway Noise.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-4" type="radio" class="form-control radio" value="0.75">
+                                                    <input name="soundproof" id="soundproof-4" type="radio" class="soundproof form-control radio" value="0.75">
                                                     <label class="control-label" for="soundproof-4">STC 38</label>
                                                 </div>
-                                                <p>SoundConrol+ - improved 2-1/8 (52 mm) Glass Unit - optimized for City (cars and lown mowers) and Highway Noise.</p>
+                                                <p class="mt-2 mt-md-0">SoundConrol+ - improved 2-1/8 (52 mm) Glass Unit - optimized for City (cars and lown mowers) and Highway Noise.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-5" type="radio" class="form-control radio" value="1.4">
+                                                    <input name="soundproof" id="soundproof-5" type="radio" class="soundproof form-control radio" value="1.4">
                                                     <label class="control-label" for="soundproof-5">STC 40</label>
                                                 </div>
-                                                <p>SoundConrol++ - improved 2-1/8 (52 mm) Glass Unit - next level for City and Highway Noise.</p>
+                                                <p class="mt-2 mt-md-0">SoundConrol++ - improved 2-1/8 (52 mm) Glass Unit - next level for City and Highway Noise.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-6" type="radio" class="form-control radio" value="3.4">
+                                                    <input name="soundproof" id="soundproof-6" type="radio" class="soundproof form-control radio" value="3.4">
                                                     <label class="control-label" for="soundproof-6">STC 43</label>
                                                 </div>
-                                                <p>LamiUnit - improved 2-1/8 (52 mm) Glass Unit - optimized for City Noise Heavy truck and heavy equpment.</p>
+                                                <p class="mt-2 mt-md-0">LamiUnit - improved 2-1/8 (52 mm) Glass Unit - optimized for City Noise Heavy truck and heavy equpment.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
-                                                    <input name="soundproof" id="soundproof-7" type="radio" class="form-control radio" value="1.8">
-                                                    <label class="control-label" for="soundproof-7">STC 50</label>
+                                                    <input name="soundproof" id="soundproof-7" type="radio" class="soundproof form-control radio" value="1.8">
+                                                    <label class="control-label" for="soundproof-7">STC 40</label>
                                                 </div>
-                                                <p>Airport noise second pick remover. Usefull with other.</p>
+                                                <p class="mt-2 mt-md-0">Airport noise second pick remover. Usefull with other.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -460,83 +453,38 @@
                                 <div class="row">
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
                                                     <label class="control-label" for="other-1">Hurricane glass</label>
-                                                    <input name="other-1" id="other-1" type="text" class="form-control" placeholder="%" value="3.4">
+                                                    <input name="other-1" id="other-1" type="text" class="other form-control" placeholder="%" value="">
                                                 </div>
-                                                <p>% of total order.</p>
+                                                <p class="mt-2 mt-md-0">% of total order.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-2">
                                         <div class="input-group">
-                                            <div class="form-group label-floating w-100 d-flex align-items-center">
+                                            <div class="form-group label-floating w-100 d-flex align-items-center flex-column flex-md-row mb-3 mb-md-0">
                                                 <div>
                                                     <label class="control-label" for="other-2">Tempered glass</label>
-                                                    <input name="other-2" id="other-2" type="text" class="form-control" placeholder="%" value="5">
+                                                    <input name="other-2" id="other-2" type="text" class="other form-control" placeholder="%" value="">
                                                 </div>
-                                                <p>% of total order.</p>
+                                                <p class="mt-2 mt-md-0">% of total order.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="tab-pane px-5" id="quote">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <h4 class="info-text"> Are you living in a nice area? </h4>
-                                    </div>
-                                    <div class="col-sm-7 col-sm-offset-1">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Street Name</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Street Number</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5 col-sm-offset-1">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">City</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Country</label>
-                                            <select name="country" class="form-control">
-                                                <option disabled="" selected=""></option>
-                                                <option value="Afghanistan"> Afghanistan</option>
-                                                <option value="Albania"> Albania</option>
-                                                <option value="Algeria"> Algeria</option>
-                                                <option value="American Samoa"> American Samoa</option>
-                                                <option value="Andorra"> Andorra</option>
-                                                <option value="Angola"> Angola</option>
-                                                <option value="Anguilla"> Anguilla</option>
-                                                <option value="Antarctica"> Antarctica</option>
-                                                <option value="...">...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="wizard-footer">
                             <div class="pull-right">
-                                <input type='button' class='btn btn-next btn-fill btn-info btn-wd my-2' name='next'
-                                       value='Next'/>
-                                <input type='button' class='btn btn-finish btn-fill btn-info btn-wd my-2' name='finish'
-                                       value='Calculate'/>
+                                <input type='button' class='btn btn-next btn-fill btn-info btn-wd my-2' name='next' value='Next'/>
+                                <input type='button' class='btn btn-finish btn-fill btn-info btn-wd my-2' name='finish' value='Request a quote' onclick="window.location.href='/request-a-quote/'"/>
                             </div>
 
                             <div class="pull-left">
-                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd my-2'
-                                       name='previous' value='Back'/>
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd my-2' name='previous' value='Back'/>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -548,18 +496,10 @@
     </div>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/jquery.bootstrap.js"></script>
 <script src="js/savy.min.js"></script>
-
 <!--  Plugin for the Wizard -->
 <script src="js/material-bootstrap-wizard.js"></script>
 
